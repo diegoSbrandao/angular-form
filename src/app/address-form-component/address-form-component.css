@@ -1,0 +1,101 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+/* Estilo CSS para o campo de entrada do bairro com cor de fundo cinza médio */
+input#bairro {
+  background-color: #ccc;
+}
+
+/* Estilo CSS para o campo de entrada do bairro com cor de fundo branco quando o formulário for enviado com um CEP válido, mas o campo de bairro estiver vazio */
+input#bairro.has-error {
+  background-color: #fff;
+}
+
+/* Estilo CSS para o campo de entrada do bairro com cor de fundo branco quando o CEP for válido e o campo de bairro estiver habilitado */
+input#bairro.enabled {
+  background-color: #fff;
+}
+
+input#logradouro {
+  background-color: #ccc;
+}
+
+input#logradouro.has-error {
+  background-color: #fff;
+}
+
+input#logradouro.enabled {
+  background-color: #fff;
+}
+
+input#cidade {
+  background-color: #ccc;
+}
+
+input#cidade.has-error {
+  background-color: #fff;
+}
+
+input#cidade.enabled {
+  background-color: #fff;
+}
+
+input#estado {
+  background-color: #ccc;
+}
+
+input#estado.has-error {
+  background-color: #fff;
+}
+
+input#estado.enabled {
+  background-color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos existentes omitidos para brevidade */
+
+.success-message {
+  color: #008000;
+  font-size: 16px;
+  margin-top: 10px;
+}

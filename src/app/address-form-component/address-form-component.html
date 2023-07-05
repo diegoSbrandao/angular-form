@@ -1,0 +1,41 @@
+<form [formGroup]="addressForm" (ngSubmit)="submitForm()" class="container mt-4">
+
+
+  <div class="form-group">
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" class="form-control" formControlName="cep" pattern="[0-9]{8}" (blur)="searchAddress()" maxlength="8">
+    <div *ngIf="showError" class="error-message small-red-text">
+      {{ errorMessage }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="logradouro">Logradouro:</label>
+    <input type="text" id="logradouro" class="form-control" formControlName="logradouro" [readonly]="!isCepValid" [disabled]="!isLogradouroEnabled" [class.enabled]="isLogradouroEnabled && logradouroField">
+  </div>
+
+  <div class="form-group">
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" class="form-control" formControlName="bairro" [readonly]="!isCepValid" [disabled]="!isBairroEnabled" [class.enabled]="isBairroEnabled && bairroField">
+  </div>
+
+  <div class="form-group">
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" class="form-control" formControlName="cidade" [readonly]="!isCepValid" [disabled]="!isCidadeEnabled" [class.enabled]="isCidadeEnabled && cidadeField">
+  </div>
+
+  <div class="form-group">
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" class="form-control" formControlName="estado" [readonly]="!isCepValid" [disabled]="!isEstadoEnabled" [class.enabled]="isEstadoEnabled && estadoField">
+  </div>
+
+  <button type="submit" [disabled]="!addressForm.valid || !isCepValid || !isFormComplete">
+    Enviar
+  </button>
+
+  <div *ngIf="showSuccess" class="success-message large-green-text">
+    Formulário enviado com sucesso!
+  </div>
+
+</form>
+
