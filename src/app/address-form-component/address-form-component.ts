@@ -123,7 +123,7 @@ export class AddressFormComponent implements OnInit {
   }
 
   validateCepFromBackend(cep: string) {
-    const url = `http://localhost:8080/employee/cep-validation/${cep}`;
+    const url = `http://localhost:8080/employee/validation/cep/${cep}`;
     return this.http.get(url, {}).pipe(
       switchMap((response: any) => {
         return new Observable((observer: Observer<any>) => {
