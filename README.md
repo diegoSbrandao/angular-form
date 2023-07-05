@@ -32,6 +32,7 @@ Este é um formulário de endereço simples desenvolvido em Angular. Ele permite
 
 ## Observações
 
+- Para correto funcionamento, deverá rodar localmente o BE da aplicação, se encontra nesse repositório: `https://github.com/diegoSbrandao/ModelApi`
 - Certifique-se de ter uma conexão com a internet para que a busca do endereço funcione corretamente.
 - As mensagens de erro e sucesso são exibidas no formulário para fornecer feedback ao usuário.
 
